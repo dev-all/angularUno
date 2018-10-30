@@ -1,0 +1,32 @@
+<app-image-detalle [selectedImage]="selectedImage"></app-image-detalle>
+<div class="container">
+ <div class="row">
+ <!--    <div *ngIf="undefined === restImages">Loading...</div>
+
+    <div *ngIf="undefined !== restImages">
+
+      <app-image *ngFor="let image of restImages['image'] | async" [image]="image" (click)="onSelect(image)"></app-image>
+
+    </div>
+
+  </div>
+  -->
+ 
+
+
+
+
+<div *ngIf="undefined === restItems">Loading...</div>
+
+<div *ngIf="undefined !== restItems">
+  <ul>
+    <li *ngFor="let post of restItems['posts']" [innerHTML]="post.title"
+        (click)="selectedContent='<h1>' + post.title + '</h1>' + post.content">
+    </li>
+  </ul>
+</div>
+<div [innerHTML]="selectedContent"></div>
+</div>
+
+
+</div>
